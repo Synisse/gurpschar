@@ -1,0 +1,9 @@
+<div class="col-md-12">
+This is the character view.
+<ul>
+  <li ng-repeat="chars in characters">
+
+    <a ui-sref="characterDetails({id : chars.id})">{{chars.name}}</a>
+  </li>
+</ul>
+</div>

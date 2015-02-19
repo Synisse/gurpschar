@@ -19,4 +19,8 @@ angular.module('gurpsApp')
     $scope.deleteThing = function(thing) {
       $http.delete('/api/things/' + thing._id);
     };
+
+    $scope.logstuff = function (){
+      console.log('Stuff');
+    };
   });
