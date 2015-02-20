@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gurpsApp')
-  .controller('CharacterCtrl', function ($scope) {
+  .controller('CharacterCtrl', function ($scope, $http) {
     $scope.message = 'Hello';
     $scope.characters = [
       {
@@ -20,4 +20,12 @@ angular.module('gurpsApp')
         'special':'fisfffft'
       }
       ];
+
+      $scope.charactersdb = [];
+
+      $scope.awesomeThings = [];
+
+      $http.get('/api/characters').success(function(awesomeThings) {
+        $scope.charactersdb = awesomeThings;
+      });
   });

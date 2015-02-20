@@ -3,7 +3,17 @@ This is the character view.
 <ul>
   <li ng-repeat="chars in characters">
 
-    <a ui-sref="characterDetails({id : chars.id})">{{chars.name}}</a>
+    <a ui-sref="characterDetails({charid : chars._id})">{{chars.name}}</a>
+  </li>
+</ul>
+
+DB
+<ul>
+  <li ng-repeat="chars in charactersdb">
+
+    <a ui-sref="characterDetails({charid : chars._id})">{{chars.name}}</a>
+
+    {{chars}}
   </li>
 </ul>
 </div>

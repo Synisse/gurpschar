@@ -9,7 +9,7 @@ angular.module('gurpsApp')
         controller: 'CharacterCtrl'
       })
       .state('characterDetails', {
-        url: '/character/:id',
+        url: '/character/:charid',
         templateUrl: 'app/character/characterdetail.html',
         controller: 'CharacterDetailCtrl'
       });
