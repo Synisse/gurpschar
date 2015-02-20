@@ -1,5 +1,5 @@
 <div class="col-md-12">
-This is the character view.
+<!-- This is the character view.
 <ul>
   <li ng-repeat="chars in characters">
 
@@ -15,5 +15,24 @@ DB
 
     {{chars}}
   </li>
-</ul>
+</ul> -->
+<div class="page-header">
+  <h1>Character sheets <small> Your characters</small></h1>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    Johann von Hartmann - Mitkommen!
+    <button class="btn btn-success">View</button>
+    <button class="btn btn-success">Edit</button>
+    <button class="btn btn-success">Delete</button>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <a ui-sref="createcharacter">
+      <button class="btn btn-success">Create new Character</button>
+    </a>
+  </div>
+</div>
 </div>

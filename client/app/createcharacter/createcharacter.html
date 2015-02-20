@@ -1,0 +1,82 @@
+<div class="col-md-12">
+This is the createcharacter view.
+
+HI {{owner().name}}
+
+<form>
+
+  <div class="form-group">
+    <label for="nameInputField">Character name</label>
+    <input type="text" class="form-control" id="nameInputField" ng-model="character.name" placeholder="Enter name">
+  </div>
+
+  <div class="form-group">
+    <label for="ownerInput">Owner</label>
+    <input type="text" class="form-control" id="ownerInput" ng-model="character.owner" placeholder="{{owner().name}}" disabled>
+  </div>
+
+  <!--ST DX IQ HT INPUTS-->
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="stInput">Strength</label>
+        <input type="text" class="form-control" id="stInput" ng-model="character.st" placeholder="0">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="dxInput">Dexterity</label>
+        <input type="text" class="form-control" id="dxInput" ng-model="character.dx"placeholder="0">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="iqInput">IQ</label>
+        <input type="text" class="form-control" id="iqInput" ng-model="character.iq"placeholder="0">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="htInput">Health</label>
+        <input type="text" class="form-control" id="htInput" ng-model="character.ht"placeholder="0">
+      </div>
+    </div>
+  </div>
+
+  <!--HP WILL PER FP INPUTS-->
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="hpInput">Health Points</label>
+        <input type="text" class="form-control" id="hpInput" ng-model="character.hp" placeholder="0">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="willInput">Willpower</label>
+        <input type="text" class="form-control" id="willInput" ng-model="character.will" placeholder="0">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="perInput">Perception</label>
+        <input type="text" class="form-control" id="perInput" ng-model="character.per" placeholder="0">
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="fpInput">FP</label>
+        <input type="text" class="form-control" id="fpInput" ng-model="character.fp" placeholder="0">
+      </div>
+    </div>
+  </div>
+
+  <input type="number" ng-model="languageCount"></input>
+
+  <div ng-repeat="i in getLanguageCount() track by $index">SWAG {{$index}}</div>
+
+  {{character}}
+
+</form>
+
+</div>
