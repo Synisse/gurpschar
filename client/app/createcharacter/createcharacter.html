@@ -71,12 +71,19 @@ HI {{owner().name}}
     </div>
   </div>
 
-  <input type="number" ng-model="languageCount"></input>
+  <form>
+    <input type="text" ng-model="language.name"></input>
+    <input type="text" ng-model="language.spoken"></input>
+    <input type="text" ng-model="language.written"></input>
+    <button ng-click="addLanguageToList(language)" class="btn btn-success">Add </button
+  </form>
+  <div ng-repeat="lang in languagelist">{{lang.name}}</div>
 
-  <div ng-repeat="i in getLanguageCount() track by $index">SWAG {{$index}}</div>
+  <button ng-click="addLanguageListToCharacter(languagelist)" class="btn btn-success">Add listtochar</button>
 
   {{character}}
 
+  languages: {{languagelist}}
 </form>
 
 </div>

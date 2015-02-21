@@ -17,4 +17,15 @@ angular.module('gurpsApp')
     $scope.getLanguageCount = function() {
       return new Array($scope.languageCount);
     };
+
+    $scope.languagelist = [];
+
+    $scope.addLanguageToList = function(language){
+      $scope.languagelist.push(language);
+      $scope.language = '';
+    };
+
+    $scope.addLanguageListToCharacter = function(languagelist){
+      $scope.character.languages = languagelist;
+    };
   });
