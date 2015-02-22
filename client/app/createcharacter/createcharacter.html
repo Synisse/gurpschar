@@ -70,20 +70,127 @@ HI {{owner().name}}
       </div>
     </div>
   </div>
+</form>
 
-  <form>
-    <input type="text" ng-model="language.name"></input>
-    <input type="text" ng-model="language.spoken"></input>
-    <input type="text" ng-model="language.written"></input>
-    <button ng-click="addLanguageToList(language)" class="btn btn-success">Add </button
+
+<!--         -->
+<!--Languages display-->
+<!--         -->
+
+<div ng-repeat="language in languagelist" class="row">
+  <form class="form-inline">
+
+    <div class="form-group col-md-3">
+      <label class="control-label">Name</label>
+      <div class="">
+        <p class="form-control-static">{{language.name}}</p>
+      </div>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="inputPassword" class="control-label">Spoken</label>
+      <div class="">
+        <p class="form-control-static">{{language.spoken}}</p>
+      </div>
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="inputPassword" class="control-label">Written</label>
+      <div class="">
+        <p class="form-control-static">{{language.written}}</p>
+      </div>
+    </div>
+
+    <button class="btn btn-danger" ng-click="removeLanguage(language)">Remove</button>
+
   </form>
+</div>
+
+<!--         -->
+<!--Languages input -->
+<!--         -->
+
+  <form class="form-inline">
+
+    <div class="form-group">
+      <label for="languageNameInput">Name</label>
+      <input id="languageNameInput" type="text" class="form-control" ng-model="language.name"></input>
+    </div>
+
+    <div class="form-group">
+      <label for="languageSpokenInput">Spoken</label>
+      <input type="text" id="languageSpokenInput" ng-model="language.spoken" class="form-control"></input>
+    </div>
+
+    <div class="form-group">
+      <label for="languageWrittenInput">Written</label>
+      <input type="text" ng-model="language.written" id="languageWrittenInput" class="form-control"></input>
+    </div>
+
+    <button ng-click="addLanguageToList(language)" class="btn btn-success">Add </button>
+
+  </form>
+
+  <!--         -->
+  <!--Advantages-->
+  <!--         -->
+
+  <form class="form-inline">
+
+    <div class="form-group">
+      <label for="advantageInput">Advantages</label>
+      <input id="advantageInput" type="text" class="form-control" ng-model="advantage"></input>
+    </div>
+
+    <button ng-click="addAdvantageToList(advantage)" class="btn btn-success">Add </button>
+
+  </form>
+
+  <!--         -->
+  <!--Disadvantages-->
+  <!--         -->
+
+  <form class="form-inline">
+
+    <div class="form-group">
+      <label for="disadvantageInput">Disadvantages</label>
+      <input id="disadvantageInput" type="text" class="form-control" ng-model="disadvantage"></input>
+    </div>
+
+    <button ng-click="addDisadvantageToList(disadvantage)" class="btn btn-success">Add </button>
+
+  </form>
+
+  <!--         -->
+  <!--Skills   -->
+  <!--         -->
+
+  <form class="form-inline">
+
+    <div class="form-group">
+      <label for="skillsInput">Skills</label>
+      <input id="skillsInput" type="text" class="form-control" ng-model="skill"></input>
+    </div>
+
+    <button ng-click="addSkillToList(skill)" class="btn btn-success">Add </button>
+
+  </form>
+
+
   <div ng-repeat="lang in languagelist">{{lang.name}}</div>
 
-  <button ng-click="addLanguageListToCharacter(languagelist)" class="btn btn-success">Add listtochar</button>
+  <!-- <button ng-click="addLanguageListToCharacter(languagelist)" class="btn btn-success">Add listtochar</button> -->
 
   {{character}}
 
   languages: {{languagelist}}
-</form>
+
+  advantages: {{advantagelist}}
+
+  disadvantages: {{disadvantagelist}}
+
+  skills: {{skilllist}}
+
+<button ng-click="magic()" class="btn btn-danger">ACHTUNG</button>
 
 </div>
