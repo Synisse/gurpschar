@@ -16,10 +16,11 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  $light: #9B4600;
  $darker: #4F2400;
  $dark: #411E02;
+ $ultrabright: #FFFFFF;
 
  body{
    font-family: 'Righteous', cursive;
-  //  background-color: $darker;
+   background-color: $darker;
  }
 
 .browsehappy {
