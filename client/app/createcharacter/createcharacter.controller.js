@@ -107,6 +107,7 @@ angular.module('gurpsApp')
       $scope.addAdvantageListToCharacter($scope.advantagelist);
       $scope.addDisadvantageListToCharacter($scope.disadvantagelist);
       $scope.addSkillListToCharacter($scope.skilllist);
+      $scope.character.owner = $scope.owner().name;
       //console.log($scope.character);
       $http.post('api/characters/', $scope.character)
         .success(function(){

@@ -24,7 +24,7 @@ var CharacterSchema = new Schema({
 
   skills: [String],
 
-  owner: [String],
+  owner: String,
 
   info: String,
   active: Boolean
