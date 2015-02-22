@@ -28,3 +28,31 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+
+.main-background{
+  width: 100%;
+  height: 500px;
+  background-color: $dark;
+  margin-top: -20px;
+}
+.main-text{
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  margin-top: 20%;
+}
+
+.get-started-button{
+  border: solid 2px $superbright;
+  border-radius: 10px;
+  background-color: $dark;
+  color: $superbright;
+  font-size: 25px;
+  margin-top: 35px;
+  padding: 5px;
+}
+
+.get-started-button:hover{
+  border: solid 2px $bright;
+  color: $bright;
+}
