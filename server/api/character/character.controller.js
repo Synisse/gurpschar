@@ -10,7 +10,7 @@
  * DELETE  /things/:id          ->  destroy
  */
 
- 
+
 var _ = require('lodash');
 var Character = require('./character.model');
 
@@ -64,6 +64,13 @@ exports.destroy = function(req, res) {
     });
   });
 };
+
+exports.owner = function(req, res){
+  Character.find({owner: req.params.owner}, function (err, characters) {
+    if(err) { return handleError(res, err); }
+    return res.json(200, characters);
+  });
+}
 
 function handleError(res, err) {
   return res.send(500, err);
