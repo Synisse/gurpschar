@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('gurpsApp')
-  .controller('CharacterCtrl', function ($scope, $http) {
+  .controller('CharacterCtrl', function ($scope, $http, Auth) {
     $scope.message = 'Hello';
+
+    $scope.currentUser = Auth.getCurrentUser;
     $scope.characters = [
       {
         'id':'1',
@@ -25,7 +27,14 @@ angular.module('gurpsApp')
 
       $scope.awesomeThings = [];
 
-      $http.get('/api/characters').success(function(awesomeThings) {
-        $scope.charactersdb = awesomeThings;
+      $http.get('/api/characters').success(function(characters) {
+        $scope.charactersdb = characters;
       });
+
+      $scope.ownCharacters = [];
+
+      $http.get('/api/characters/ownership/' + $scope.currentUser().name)
+        .success(function(characters){
+          $scope.ownCharacters = characters;
+        })
   });
