@@ -2,7 +2,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 $fa-font-path: "/bower_components/font-awesome/fonts";
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
-@import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
 @import 'font-awesome/scss/font-awesome';
 
 /**
@@ -17,6 +17,10 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  $darker: #4F2400;
  $dark: #411E02;
  $ultrabright: #FFFFFF;
+
+ // .row{
+ //   background-color: $darker;
+ // }
 
  body{
    font-family: 'Righteous', cursive;
