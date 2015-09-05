@@ -36,5 +36,5 @@ angular.module('gurpsApp')
       $http.get('/api/characters/ownership/' + $scope.currentUser().name)
         .success(function(characters){
           $scope.ownCharacters = characters;
-        })
+        });
   });
