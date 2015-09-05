@@ -1,349 +1,352 @@
-<div> yolo this is {{characterid}} and {{character.name}}</div>
-<button class="btn btn-danger" ng-click="deleteCharacter();">Delete this character</button>
-
-<div class="container">
-  <div class="row charactercontent">
-
-    <!-- HEADING -->
-
-    <div class="col-md-12 heading">
-      Character: {{character.name}}
-      <span class="ownership">
-        by {{character.owner}}
-      </span>
-    </div>
-
-    <!-- MAINSTATS -->
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Strength
-        </div>
-        <div class="statValue">
-          {{character.st}}
-        </div>
+<div class="character-detail-main">
+  
+  <div> yolo this is {{characterid}} and {{character.name}}</div>
+  <button class="btn btn-danger" ng-click="deleteCharacter();">Delete this character</button>
+  
+  <div class="container">
+    <div class="row charactercontent">
+  
+      <!-- HEADING -->
+  
+      <div class="col-md-12 heading">
+        Character: {{character.name}}
+        <span class="ownership">
+          by {{character.owner}}
+        </span>
       </div>
-    </div>
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Dexterity
-        </div>
-        <div class="statValue">
-          {{character.dx}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          IQ
-        </div>
-        <div class="statValue">
-          {{character.iq}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Health
-        </div>
-        <div class="statValue">
-          {{character.ht}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Health Points
-        </div>
-        <div class="statValue">
-          {{character.hp}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Willpower
-        </div>
-        <div class="statValue">
-          {{character.will}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Perception
-        </div>
-        <div class="statValue">
-          {{character.per}}
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          FP
-        </div>
-        <div class="statValue">
-          {{character.fp}}
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-  <div class="row charactercontent">
-
-    <!-- BASICS -->
-    <div class="col-md-3">
-
-      <div class="statContainer">
-        <div class="statHeader">
-          Basics
-        </div>
-
-        <div class="statLabel">
-          Basic Lift
-          <span class="statValueSmall">
-            {{character.st*character.st/5}}
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Damage Thrust
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Damage Swing
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Basic Speed
-          <span class="statValueSmall">
-            Formula?
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Basic Move
-          <span class="statValueSmall">
-            Formula?
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ENCOUMBERANCE -->
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Encumberance
-        </div>
-
-        <div class="statLabel">
-          None(0)
-          <span class="statValueSmall">
-            {{character.st*character.st/5}}
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Light(1)
-          <span class="statValueSmall">
-            {{character.st*character.st/5*2}}
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Medium(2)
-          <span class="statValueSmall">
-            {{character.st*character.st/5*3}}
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Heavy(3)
-          <span class="statValueSmall">
-            {{character.st*character.st/5*6}}
-          </span>
-        </div>
-
-        <div class="statLabel">
-          X-Heavy(4)
-          <span class="statValueSmall">
-            {{character.st*character.st/5*10}}
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <!-- MOVE -->
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Move
-        </div>
-
-        <div class="statLabel">
-          BM*1
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          BM*0.8
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          BM*0.6
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          BM*0.4
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          BM*0.2
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <!-- DODGE -->
-    <div class="col-md-3">
-      <div class="statContainer">
-        <div class="statHeader">
-          Dodge
-        </div>
-
-        <div class="statLabel">
-          Dodge
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Dodge-1
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Dodge-2
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Dodge-3
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-
-        <div class="statLabel">
-          Dodge-4
-          <span class="statValueSmall">
-            NA
-          </span>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- ADVANTAGES AND DISADVANTAGES -->
-  <div class="row charactercontent">
-
-    <!-- ADVANTAGES -->
-    <div class="col-md-6">
-      <div class="statContainer">
-        <div class="statHeader">
-          Advantages
-        </div>
-
-        <div class="statLabel" ng-repeat="adv in character.advantages">
-          {{adv}}
-        </div>
-
-      </div>
-    </div>
-
-    <!-- DISADVANTAGES -->
-    <div class="col-md-6">
-      <div class="statContainer">
-        <div class="statHeader">
-          Disadvantages
-        </div>
-
-        <div class="statLabel" ng-repeat="disadv in character.disadvantages">
-          {{disadv}}
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-  <div class="row charactercontent">
-
-    <!--LANGUAGES-->
-    <div class="col-md-6">
-      <div class="statContainer">
-        <div class="statHeader">
-          Skills
-        </div>
-
-          <div class="row statLabel" ng-repeat="lang in character.languages">
-            <div class="col-md-4">{{lang.name}}</div>
-            <div class="col-md-4">{{lang.spoken}}</div>
-            <div class="col-md-4">{{lang.written}}</div>
+  
+      <!-- MAINSTATS -->
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Strength
           </div>
-
-      </div>
-    </div>
-
-    <!--Skills-->
-    <div class="col-md-6">
-      <div class="statContainer">
-        <div class="statHeader">
-          Skills
+          <div class="statValue">
+            {{character.st}}
+          </div>
         </div>
-
-        <div class="statLabel" ng-repeat="skills in character.skills">
-          {{skills}}
-        </div>
-
       </div>
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Dexterity
+          </div>
+          <div class="statValue">
+            {{character.dx}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            IQ
+          </div>
+          <div class="statValue">
+            {{character.iq}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Health
+          </div>
+          <div class="statValue">
+            {{character.ht}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Health Points
+          </div>
+          <div class="statValue">
+            {{character.hp}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Willpower
+          </div>
+          <div class="statValue">
+            {{character.will}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Perception
+          </div>
+          <div class="statValue">
+            {{character.per}}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            FP
+          </div>
+          <div class="statValue">
+            {{character.fp}}
+          </div>
+        </div>
+      </div>
+  
+  
     </div>
-
+  
+    <div class="row charactercontent">
+  
+      <!-- BASICS -->
+      <div class="col-md-3">
+  
+        <div class="statContainer">
+          <div class="statHeader">
+            Basics
+          </div>
+  
+          <div class="statLabel">
+            Basic Lift
+            <span class="statValueSmall">
+              {{character.st*character.st/5}}
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Damage Thrust
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Damage Swing
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Basic Speed
+            <span class="statValueSmall">
+              Formula?
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Basic Move
+            <span class="statValueSmall">
+              Formula?
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- ENCOUMBERANCE -->
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Encumberance
+          </div>
+  
+          <div class="statLabel">
+            None(0)
+            <span class="statValueSmall">
+              {{character.st*character.st/5}}
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Light(1)
+            <span class="statValueSmall">
+              {{character.st*character.st/5*2}}
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Medium(2)
+            <span class="statValueSmall">
+              {{character.st*character.st/5*3}}
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Heavy(3)
+            <span class="statValueSmall">
+              {{character.st*character.st/5*6}}
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            X-Heavy(4)
+            <span class="statValueSmall">
+              {{character.st*character.st/5*10}}
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- MOVE -->
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Move
+          </div>
+  
+          <div class="statLabel">
+            BM*1
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            BM*0.8
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            BM*0.6
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            BM*0.4
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            BM*0.2
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- DODGE -->
+      <div class="col-md-3">
+        <div class="statContainer">
+          <div class="statHeader">
+            Dodge
+          </div>
+  
+          <div class="statLabel">
+            Dodge
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Dodge-1
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Dodge-2
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Dodge-3
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+  
+          <div class="statLabel">
+            Dodge-4
+            <span class="statValueSmall">
+              NA
+            </span>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- ADVANTAGES AND DISADVANTAGES -->
+    <div class="row charactercontent">
+  
+      <!-- ADVANTAGES -->
+      <div class="col-md-6">
+        <div class="statContainer">
+          <div class="statHeader">
+            Advantages
+          </div>
+  
+          <div class="statLabel" ng-repeat="adv in character.advantages">
+            {{adv}}
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- DISADVANTAGES -->
+      <div class="col-md-6">
+        <div class="statContainer">
+          <div class="statHeader">
+            Disadvantages
+          </div>
+  
+          <div class="statLabel" ng-repeat="disadv in character.disadvantages">
+            {{disadv}}
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="row charactercontent">
+  
+      <!--LANGUAGES-->
+      <div class="col-md-6">
+        <div class="statContainer">
+          <div class="statHeader">
+            Skills
+          </div>
+  
+            <div class="row statLabel" ng-repeat="lang in character.languages">
+              <div class="col-md-4">{{lang.name}}</div>
+              <div class="col-md-4">{{lang.spoken}}</div>
+              <div class="col-md-4">{{lang.written}}</div>
+            </div>
+  
+        </div>
+      </div>
+  
+      <!--Skills-->
+      <div class="col-md-6">
+        <div class="statContainer">
+          <div class="statHeader">
+            Skills
+          </div>
+  
+          <div class="statLabel" ng-repeat="skills in character.skills">
+            {{skills}}
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  
   </div>
-
 </div>
