@@ -100,8 +100,6 @@ angular.module('gurpsApp')
       $scope.skilllist.splice(index, 1);
     };
 
-
-
     $scope.magic = function(){
       $scope.addLanguageListToCharacter($scope.languagelist);
       $scope.addAdvantageListToCharacter($scope.advantagelist);
@@ -112,6 +110,7 @@ angular.module('gurpsApp')
       $http.post('api/characters/', $scope.character)
         .success(function(){
           console.log('Great success');
+          console.log($scope.character);
         }).
         error(function(){
           console.log('nope');
