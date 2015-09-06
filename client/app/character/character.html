@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<div class="col-md-12 character-main">
 <!-- This is the character view.
 <ul>
   <li ng-repeat="chars in characters">
@@ -20,10 +20,30 @@ DB
   <h1>Character sheets <small> Your characters</small></h1>
 </div>
 
-<div class="panel panel-default">
+<!--<div class="char-sub-heading">
+  Your characters
+</div>-->
+
+<div class="col-md-6">
+  <div ng-repeat="chars in ownCharacters">
+    <div class="col-md-6">{{chars.name}}</div>
+    <div class="col-md-6">
+      <a ui-sref="characterDetails({charid : chars._id})">
+        <button ui-sref="characterDetails({charid : chars._id})" class="btn btn-success">View</button>  
+      </a>
+      <button class="btn btn-success">Edit</button>
+      <button class="btn btn-success">Delete</button>  
+    </div> 
+  </div>
+</div>
+<div class="col-md-6">
+  
+</div>
+
+<!--<div class="panel panel-default">
   <div class="panel-body">
     <div ng-repeat="chars in ownCharacters">
-      {{chars.name}} - Mitkommen!
+      {{chars.name}}
       <a ui-sref="characterDetails({charid : chars._id})">
         <button ui-sref="characterDetails({charid : chars._id})" class="btn btn-success">View</button>  
       </a>
@@ -31,30 +51,41 @@ DB
       <button class="btn btn-success">Delete</button>
     </div>
   </div>
-</div>
-
-<div class="panel panel-default">
+</div>-->
+    <a ui-sref="createcharacter">
+      <button class="btn btn-success">Create new Character</button>
+    </a>
+<!--<div class="panel panel-default">
   <div class="panel-body">
     <a ui-sref="createcharacter">
       <button class="btn btn-success">Create new Character</button>
     </a>
   </div>
-</div>
+</div>-->
 
 <div class="page-header">
   <h1>Character sheets <small> All public characters</small></h1>
 </div>
 
-<div class="panel panel-default">
+<!--<div class="panel panel-default">
   <div class="panel-body">
     <div ng-repeat="chars in charactersdb">
-      {{chars.name}} - Mitkommen!
+      {{chars.name}}
       <a ui-sref="characterDetails({charid : chars._id})">
         <button class="btn btn-success">View</button>
       </a>
-      <button class="btn btn-success">Edit</button>
-      <button class="btn btn-success">Delete</button>
     </div>
+  </div>
+</div>-->
+
+<div class="col-md-6">
+  <div ng-repeat="chars in charactersdb">
+    <div class="col-md-6">{{chars.name}}</div>
+    <div class="col-md-6">
+      <a ui-sref="characterDetails({charid : chars._id})">
+        <button class="btn btn-success">View</button>  
+      </a>
+    </div> 
   </div>
 </div>
 </div>

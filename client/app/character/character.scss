@@ -3,7 +3,12 @@
 }
 
 .character-main{
-  background-color: green;
+  background-color: $darker;
+  color: white;
+  
+  .char-sub-heading{
+    color: white;
+  }
 }
 
 .character-detail-main{
