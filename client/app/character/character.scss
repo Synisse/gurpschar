@@ -67,6 +67,12 @@
   background-size: 200% 200%;
 }
 
+.fp-container{
+  border-color: $statsyellow;
+  background: linear-gradient(182deg, #292727, $statsyellow);
+  background-size: 200% 200%;
+}
+
 .statValueSmall{
   // text-align: right;
   float:right;
