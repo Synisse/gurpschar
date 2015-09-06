@@ -38,6 +38,18 @@
   margin-bottom: 15px;
 }
 
+.strength-container{
+  border-color: $statsred;
+  background: linear-gradient(182deg, #292727, #b50d18);
+  background-size: 200% 200%;
+}
+
+.dexterity-container{
+  border-color: $statsgreen;
+  background: linear-gradient(182deg, #292727, $statsgreen);
+  background-size: 200% 200%;
+}
+
 .statValueSmall{
   // text-align: right;
   float:right;
