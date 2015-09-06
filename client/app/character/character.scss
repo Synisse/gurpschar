@@ -7,7 +7,7 @@
 }
 
 .character-detail-main{
-  background-color: #333436;
+  background-color: $darker;
 }
 
 .heading{
@@ -47,6 +47,18 @@
 .dexterity-container{
   border-color: $statsgreen;
   background: linear-gradient(182deg, #292727, $statsgreen);
+  background-size: 200% 200%;
+}
+
+.intelligence-container{
+  border-color: $statsblue;
+  background: linear-gradient(182deg, #292727, $statsblue);
+  background-size: 200% 200%;
+}
+
+.health-container{
+  border-color: $statsbrown;
+  background: linear-gradient(182deg, #292727, $statsbrown);
   background-size: 200% 200%;
 }
 

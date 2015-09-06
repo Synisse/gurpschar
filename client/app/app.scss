@@ -9,21 +9,34 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
  * App-wide Styles
  */
 
-
- $main: #672E00;
- $superbright: #FF7400;
- $bright: #D36000;
- $light: #9B4600;
- $darker: #4F2400;
- $dark: #411E02;
+// ORANGE STYLE
+ // $main: #672E00;
+ // $superbright: #FF7400;
+ // $bright: #D36000;
+ // $light: #9B4600;
+ // $darker: #4F2400;
+ // $dark: #411E02;
+ // $ultrabright: #FFFFFF;
+ 
+ //DARKISH GREEN GRAY
+$color-primary-0: #444A45;	// Main Primary color */
+$color-primary-1: #526453;
+$color-primary-2: #393F39;
+$color-primary-3: #2D342E;
+$color-primary-4: #202621;
+ 
+ $main: $color-primary-0;
+ $superbright: $color-primary-1 lighten;
+ $bright: $color-primary-1;
+ $light: $color-primary-2;
+ $darker: $color-primary-3;
+ $dark: $color-primary-4;
  $ultrabright: #FFFFFF;
  
  $statsred: #B50D18;
  $statsgreen: green;
-
- // .row{
- //   background-color: $darker;
- // }
+ $statsblue: blue;
+ $statsbrown: brown;
 
  body{
    font-family: 'Righteous', cursive;
@@ -78,11 +91,17 @@ https://github.com/google/material-design-icons
   background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) no-repeat  center center;
 }
 
+//ORANGE STYLE
+// $bgDefault      : #672e00;
+// $bgHighlight    : #4f2400;
+// $colDefault     : #ff9237;
+// $colHighlight   : #d36000;
 
-$bgDefault      : #672e00;
-$bgHighlight    : #4f2400;
+$bgDefault      : #444a45; //main
+$bgHighlight    : #2D342E; //darker
 $colDefault     : #ff9237;
-$colHighlight   : #d36000;
+$colHighlight   : #526453; //bright
+
 $dropDown       : false;
 .navbar-default {
   background-color: $bgDefault;
