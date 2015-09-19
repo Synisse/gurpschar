@@ -15,6 +15,26 @@ $btnGithubBackgroundHighlight:      #ccc;
 .btn-google-plus {
   @include button-variant($btnText, $btnGooglePlusBackground, $btnGooglePlusBackgroundHighlight);
 }
+
 .btn-github {
   @include button-variant($btnTextAlt, $btnGithubBackground, $btnGithubBackgroundHighlight);
+}
+
+.login-container{
+  color: white;
+  
+  .btn-login{
+    background: green;
+  }
+  
+  .btn-register{
+    background: green;
+    border: none;
+    color: white;
+  }
+  
+  input{
+    background: $bright;
+    color: white;
+  }
 }
