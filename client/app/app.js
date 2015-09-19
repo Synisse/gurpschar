@@ -5,18 +5,17 @@ angular.module('gurpsApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap',
-  'ngMaterial'
+  'ui.bootstrap'
 ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, $mdThemingProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
       .otherwise('/');
 
     $locationProvider.html5Mode(true);
     $httpProvider.interceptors.push('authInterceptor');
-    $mdThemingProvider.theme('default')
-    .primaryPalette('blue-grey')
-    .accentPalette('orange');
+    //$mdThemingProvider.theme('default')
+    //.primaryPalette('blue-grey')
+    //.accentPalette('orange');
 
   })
 
