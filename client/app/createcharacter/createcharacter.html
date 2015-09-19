@@ -1,115 +1,114 @@
-<div class="col-md-12">
-This is the createcharacter view.
-
-HI {{owner().name}}
-
-<form>
-
-  <div class="form-group">
-    <label for="nameInputField">Character name</label>
-    <input type="text" class="form-control" id="nameInputField" ng-model="character.name" placeholder="Enter name">
-  </div>
-
-  <div class="form-group">
-    <label for="ownerInput">Owner</label>
-    <input type="text" class="form-control" id="ownerInput" ng-model="character.owner" placeholder="{{owner().name}}" disabled>
-  </div>
-
-  <!--ST DX IQ HT INPUTS-->
-  <div class="row">
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="stInput">Strength</label>
-        <input type="text" class="form-control" id="stInput" ng-model="character.st" placeholder="0">
+<div class="create-container container">
+  <div class="col-md-12">
+  <!--This is the createcharacter view.
+  
+  HI {{owner().name}}-->
+  
+  <h2>Character Info</h2>
+  <form>
+    <div class="form-group">
+      <label for="nameInputField">Character name</label>
+      <input type="text" class="form-control" id="nameInputField" ng-model="character.name" placeholder="Enter name">
+    </div>
+  
+    <div class="form-group">
+      <label for="ownerInput">Owner</label>
+      <input type="text" class="form-control" id="ownerInput" ng-model="character.owner" placeholder="{{owner().name}}" disabled>
+    </div>
+  
+    <!--ST DX IQ HT INPUTS-->
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="stInput">Strength</label>
+          <input type="text" class="form-control" id="stInput" ng-model="character.st" placeholder="0">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="dxInput">Dexterity</label>
+          <input type="text" class="form-control" id="dxInput" ng-model="character.dx"placeholder="0">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="iqInput">IQ</label>
+          <input type="text" class="form-control" id="iqInput" ng-model="character.iq"placeholder="0">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="htInput">Health</label>
+          <input type="text" class="form-control" id="htInput" ng-model="character.ht"placeholder="0">
+        </div>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="dxInput">Dexterity</label>
-        <input type="text" class="form-control" id="dxInput" ng-model="character.dx"placeholder="0">
+  
+    <!--HP WILL PER FP INPUTS-->
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="hpInput">Health Points</label>
+          <input type="text" class="form-control" id="hpInput" ng-model="character.hp" placeholder="0">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="willInput">Willpower</label>
+          <input type="text" class="form-control" id="willInput" ng-model="character.will" placeholder="0">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="perInput">Perception</label>
+          <input type="text" class="form-control" id="perInput" ng-model="character.per" placeholder="0">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label for="fpInput">FP</label>
+          <input type="text" class="form-control" id="fpInput" ng-model="character.fp" placeholder="0">
+        </div>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="iqInput">IQ</label>
-        <input type="text" class="form-control" id="iqInput" ng-model="character.iq"placeholder="0">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="htInput">Health</label>
-        <input type="text" class="form-control" id="htInput" ng-model="character.ht"placeholder="0">
-      </div>
-    </div>
-  </div>
-
-  <!--HP WILL PER FP INPUTS-->
-  <div class="row">
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="hpInput">Health Points</label>
-        <input type="text" class="form-control" id="hpInput" ng-model="character.hp" placeholder="0">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="willInput">Willpower</label>
-        <input type="text" class="form-control" id="willInput" ng-model="character.will" placeholder="0">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="perInput">Perception</label>
-        <input type="text" class="form-control" id="perInput" ng-model="character.per" placeholder="0">
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="form-group">
-        <label for="fpInput">FP</label>
-        <input type="text" class="form-control" id="fpInput" ng-model="character.fp" placeholder="0">
-      </div>
-    </div>
-  </div>
-</form>
-
-
-<!--         -->
-<!--Languages display-->
-<!--         -->
-
-<div ng-repeat="language in languagelist" class="row">
-  <form class="form-inline">
-
-    <div class="form-group col-md-3">
-      <label class="control-label">Name</label>
-      <div class="">
-        <p class="form-control-static">{{language.name}}</p>
-      </div>
-    </div>
-
-    <div class="form-group col-md-3">
-      <label for="inputPassword" class="control-label">Spoken</label>
-      <div class="">
-        <p class="form-control-static">{{language.spoken}}</p>
-      </div>
-    </div>
-
-    <div class="form-group col-md-3">
-      <label for="inputPassword" class="control-label">Written</label>
-      <div class="">
-        <p class="form-control-static">{{language.written}}</p>
-      </div>
-    </div>
-
-    <button class="btn btn-danger" ng-click="removeLanguage(language)">Remove</button>
-
   </form>
-</div>
-
-<!--         -->
-<!--Languages input -->
-<!--         -->
-
+  
+  
+  <!--         -->
+  <!--Languages display-->
+  <!--         -->
+  <h2>Languages</h2>
+  <div ng-repeat="language in languagelist" class="row">
+    <form class="form-inline">
+      <div class="form-group col-md-3">
+        <label class="control-label">Name</label>
+        <div class="">
+          <p class="form-control-static">{{language.name}}</p>
+        </div>
+      </div>
+  
+      <div class="form-group col-md-3">
+        <label for="inputPassword" class="control-label">Spoken</label>
+        <div class="">
+          <p class="form-control-static">{{language.spoken}}</p>
+        </div>
+      </div>
+  
+      <div class="form-group col-md-3">
+        <label for="inputPassword" class="control-label">Written</label>
+        <div class="">
+          <p class="form-control-static">{{language.written}}</p>
+        </div>
+      </div>
+  
+      <button class="btn btn-danger" ng-click="removeLanguage(language)">Remove</button>
+  
+    </form>
+  </div>
+  
+  <!--         -->
+  <!--Languages input -->
+  <!--         -->
   <form class="form-inline">
 
     <div class="form-group">
@@ -130,15 +129,25 @@ HI {{owner().name}}
     <button ng-click="addLanguageToList(language)" class="btn btn-success">Add </button>
 
   </form>
-
+  
   <!--         -->
   <!--Advantages-->
   <!--         -->
-
+  <h2>Advantages</h2>
+  <div class="prop-list" ng-repeat="advantage in advantagelist">
+    <div class="name">
+      {{advantage}}   
+    </div>
+    <div class="vertical-spacer"></div>
+    <div class="control">
+      <button class="btn btn-danger" ng-click="removeAdvantage(advantage)">Remove</button>
+    </div>
+  </div>
+  
   <form class="form-inline">
 
     <div class="form-group">
-      <label for="advantageInput">Advantages</label>
+      <label for="advantageInput">Advantage</label>
       <input id="advantageInput" type="text" class="form-control" ng-model="advantage"></input>
     </div>
 
@@ -149,11 +158,21 @@ HI {{owner().name}}
   <!--         -->
   <!--Disadvantages-->
   <!--         -->
-
+  <h2>Disadvantages</h2>
+  <div class="prop-list" ng-repeat="disadvantage in disadvantagelist">
+    <div class="name">
+      {{disadvantage}}   
+    </div>
+    <div class="vertical-spacer"></div>
+    <div class="control">
+      <button class="btn btn-danger" ng-click="removeDisadvantage(disadvantage)">Remove</button>
+    </div>
+  </div>
+  
   <form class="form-inline">
 
     <div class="form-group">
-      <label for="disadvantageInput">Disadvantages</label>
+      <label for="disadvantageInput">Disadvantage</label>
       <input id="disadvantageInput" type="text" class="form-control" ng-model="disadvantage"></input>
     </div>
 
@@ -164,11 +183,21 @@ HI {{owner().name}}
   <!--         -->
   <!--Skills   -->
   <!--         -->
-
+  <h2>Skills</h2>
+  <div class="prop-list" ng-repeat="skill in skilllist">
+    <div class="name">
+      {{skill}}   
+    </div>
+    <div class="vertical-spacer"></div>
+    <div class="control">
+      <button class="btn btn-danger" ng-click="removeSkill(skill)">Remove</button>
+    </div>
+  </div>
+  
   <form class="form-inline">
 
     <div class="form-group">
-      <label for="skillsInput">Skills</label>
+      <label for="skillsInput">Skill</label>
       <input id="skillsInput" type="text" class="form-control" ng-model="skill"></input>
     </div>
 
@@ -176,12 +205,12 @@ HI {{owner().name}}
 
   </form>
 
-
-  <div ng-repeat="lang in languagelist">{{lang.name}}</div>
+<!--
+  <div ng-repeat="lang in languagelist">{{lang.name}}</div>-->
 
   <!-- <button ng-click="addLanguageListToCharacter(languagelist)" class="btn btn-success">Add listtochar</button> -->
 
-  {{character}}
+  <!--{{character}}
 
   languages: {{languagelist}}
 
@@ -189,8 +218,9 @@ HI {{owner().name}}
 
   disadvantages: {{disadvantagelist}}
 
-  skills: {{skilllist}}
-
-<button ng-click="magic()" class="btn btn-danger">ACHTUNG</button>
-
+  skills: {{skilllist}}-->
+  <hr>
+  <button ng-click="magic()" class="btn btn-success">Erstellen</button>
+  
+  </div>
 </div>

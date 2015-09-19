@@ -1,0 +1,36 @@
+.create-container{
+	color: white;
+	
+	input{
+    	background: $bright;
+    	color: white;
+  	}
+	  
+	.prop-list{
+		display: flex;
+		
+		.name{
+			line-height: 32px;
+		}
+		
+		.control{
+			float: right;
+		}
+	}
+	
+	.disadvantage-list{
+		display: flex;
+		
+		.advantage-name{
+			line-height: 32px;
+		}
+		
+		.advantage-control{
+			float: right;
+		}
+	}
+	
+	.vertical-spacer{
+		width: 50px;
+	}
+}
